@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiffSelectActivity" >
+    
+	<ImageView
+        android:id="@+id/diffsel_return_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:src="@drawable/btn_return" />
+	  <TextView
+        android:id="@+id/diffsel_title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/diffsel_return_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/diffsel_title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+	  <LinearLayout
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:orientation="vertical"
+	      android:layout_below="@id/diffsel_title_textview"
+	       android:layout_centerHorizontal="true"
+	      android:layout_marginTop="30dp" >
+
+	      <RelativeLayout
+	          android:layout_width="match_parent"
+	          android:layout_height="wrap_content"
+	          android:layout_gravity="center_horizontal" >
+
+	          <TextView
+	              android:id="@+id/diffsel_diff_txt"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:layout_centerVertical="true"
+	              android:layout_marginRight="40dp"
+	              android:layout_toLeftOf="@+id/linearLayout1"
+	              android:gravity="center_vertical"
+	              android:text="Difficulty" />
+
+	          <LinearLayout
+	              android:id="@+id/linearLayout1"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:layout_alignParentRight="true"
+	              android:layout_alignParentTop="true"
+	              android:orientation="vertical" >
+
+	              <CheckBox
+	                  android:id="@+id/diffsel_lv1chk"
+	                  android:layout_width="wrap_content"
+	                  android:layout_height="wrap_content"
+	                  android:text="LV1" />
+
+	              <CheckBox
+	                  android:id="@+id/diffsel_lv2chk"
+	                  android:layout_width="wrap_content"
+	                  android:layout_height="wrap_content"
+	                  android:text="LV2" />
+
+	              <CheckBox
+	                  android:id="@+id/diffsel_lv3chk"
+	                  android:layout_width="wrap_content"
+	                  android:layout_height="wrap_content"
+	                  android:text="LV3" />
+
+	              <CheckBox
+	                  android:id="@+id/diffsel_lv4chk"
+	                  android:layout_width="wrap_content"
+	                  android:layout_height="wrap_content"
+	                  android:text="LV4" />
+
+	              <CheckBox
+	                  android:id="@+id/diffsel_lv5chk"
+	                  android:layout_width="wrap_content"
+	                  android:layout_height="wrap_content"
+	                  android:text="LV5" />
+	          </LinearLayout>
+
+	      </RelativeLayout>
+
+	      <RelativeLayout
+	          android:layout_width="match_parent"
+	          android:layout_height="wrap_content" >
+
+	          <ToggleButton
+	              android:id="@+id/diffsel_mcond_toggle"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:layout_alignParentRight="true"
+	              android:layout_alignParentTop="true"
+	              android:text="ON" />
+
+	          <TextView
+	              android:id="@+id/diffsel_mcond_txt"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:layout_alignBaseline="@+id/diffsel_mcond_toggle"
+	              android:layout_alignBottom="@+id/diffsel_mcond_toggle"
+	              android:layout_alignParentLeft="true"
+	              android:text="Multy conditions" />
+
+	      </RelativeLayout>
+
+	      <ImageView
+	          android:id="@+id/diffsel_crst_btn"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:layout_marginTop="30dp"
+	          android:src="@drawable/btn_gamestart" />
+
+	  </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateGameActivity" >
+	
+     <ImageView
+        android:id="@+id/createg_return_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:src="@drawable/btn_return" />
+     
+     
+    <TextView
+        android:id="@+id/createg_title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createg_return_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/createg_title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createg_title_textview"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"> 
+        
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+      		android:layout_height="wrap_content"
+      	    android:layout_gravity="center_horizontal">
+            <TextView
+                android:id="@+id/createg_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room name" />
+
+            <EditText
+                android:id="@+id/createg_gname_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="200dp"
+                android:layout_toRightOf="@id/createg_txt1"
+                >
+               
+            </EditText>
+     	
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+      		android:layout_height="wrap_content"
+      		android:layout_gravity="center_horizontal">
+            <TextView
+                android:id="@+id/createg_txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room Password" />
+
+            <EditText
+                android:id="@+id/createg_pass_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="200dp"
+                android:password="true"
+                android:layout_toRightOf="@id/createg_txt2"
+                >
+               
+            </EditText>  
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+      		android:layout_height="wrap_content"
+      		android:layout_gravity="center_horizontal">
+            <TextView
+                android:id="@+id/createg_txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="# of Plyaers" />
+
+            <Spinner
+                android:id="@+id/createg_N_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/createg_txt3" />
+     
+        </RelativeLayout>
+        <ImageView
+        android:id="@+id/createg_createg_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/btn_create_game" />
+
+    </LinearLayout>
+
+  
+     
+</RelativeLayout>

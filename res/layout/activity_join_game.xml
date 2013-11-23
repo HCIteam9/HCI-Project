@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JoinGameActivity" >
+	
+     <ImageView
+        android:id="@+id/joing_return_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:src="@drawable/btn_return" />
+      <TextView
+        android:id="@+id/joing_title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/joing_return_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/joing_title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+      <ListView
+          android:id="@+id/joing_list"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/joing_title_textview"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="41dp"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp" >
+      </ListView>
+     
+</RelativeLayout>
