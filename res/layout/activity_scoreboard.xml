@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ulruru_bg2"
     tools:context=".ScoreboardActivity" >
 	
      <ImageView
@@ -12,18 +13,6 @@
         android:layout_alignParentTop="true"
         android:padding="5dp"
         android:src="@drawable/btn_return" />
-
-    <TextView
-        android:id="@+id/scoreb_title_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/scoreb_return_btn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="@string/scoreb_title"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textAlignment="center"
-        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -47,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
+                android:textSize="20sp"
                 android:text="0000" />
             <TextView
                 android:id="@+id/scoreg_txt1"
@@ -54,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@id/scoreg_disp1"
                 android:layout_marginRight="20dp"
+                android:textSize="20sp"
                 android:text="Single Highscore" />
 
         </RelativeLayout>
@@ -69,6 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
+                android:textSize="20sp"
                 android:text="0000" />
            <TextView
                 android:id="@+id/scoreg_txt2"
@@ -76,6 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@id/scoreg_disp2"
                 android:layout_marginRight="20dp"
+                android:textSize="20sp"
                 android:text="Multy Highscore" />
             
 
@@ -92,6 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
+                android:textSize="20sp"
                 android:text="0000" />
             <TextView
                 android:id="@+id/scoreg_txt3"
@@ -99,10 +93,23 @@
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@id/scoreg_disp3"
                 android:layout_marginRight="20dp"
+                android:textSize="20sp"
                 android:text="Online Ranking" />
 
         </RelativeLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/scoreb_title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scoreb_return_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:text="@string/scoreb_title"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30sp" />
 
 </RelativeLayout>

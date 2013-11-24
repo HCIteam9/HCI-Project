@@ -4,6 +4,7 @@ import data.userData;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
 public class DiffSelectActivity extends Activity {
@@ -18,6 +20,8 @@ public class DiffSelectActivity extends Activity {
 	ImageView Return_btn,CS_btn;
 	CheckBox lv1_chkb,lv2_chkb,lv3_chkb,lv4_chkb,lv5_chkb;
 	ToggleButton cond_toggle;
+	TextView title, diffc, multcond;
+	
 	boolean cond_status,lv1,lv2,lv3,lv4,lv5;
 	
 	@Override
@@ -33,6 +37,11 @@ public class DiffSelectActivity extends Activity {
 		lv4_chkb = (CheckBox)findViewById(R.id.diffsel_lv4chk);
 		lv5_chkb = (CheckBox)findViewById(R.id.diffsel_lv5chk);
 		cond_toggle = (ToggleButton)findViewById(R.id.diffsel_mcond_toggle);
+		
+		title = (TextView)findViewById(R.id.diffsel_title_textview);
+		diffc = (TextView)findViewById(R.id.diffsel_diff_txt);
+		multcond = (TextView)findViewById(R.id.diffsel_mcond_txt);
+		
 		cond_status=cond_toggle.isChecked();
 		
 		if(userData.usr.isGame_mode()==true)
@@ -131,6 +140,14 @@ public class DiffSelectActivity extends Activity {
 					lv5=true;
 			}
 		});
+		
+		title = (TextView)findViewById(R.id.diffsel_title_textview);
+		diffc = (TextView)findViewById(R.id.diffsel_diff_txt);
+		multcond = (TextView)findViewById(R.id.diffsel_mcond_txt);
+		Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/SHOWG.TTF");
+		title.setTypeface(typeFace);
+		diffc.setTypeface(typeFace);
+		multcond.setTypeface(typeFace);
 	}
 
 	@Override

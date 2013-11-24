@@ -13,6 +13,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_margin="5dp"
+        android:textSize="20sp"
         android:text="Title" />
 
     <TextView
@@ -32,5 +33,14 @@
         android:layout_alignTop="@+id/rlst_title"
         android:layout_toRightOf="@+id/rlst_title"
         android:src="@drawable/lock" />
+
+    <TextView
+        android:id="@+id/rlst_currentp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rlst_maxp"
+        android:layout_marginLeft="5dp"
+        android:text="current player" />
 
 </RelativeLayout>

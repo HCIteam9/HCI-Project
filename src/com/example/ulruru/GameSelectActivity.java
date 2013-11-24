@@ -4,14 +4,17 @@ import data.userData;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class GameSelectActivity extends Activity {
 
 	ImageView Return_btn,Singleplay_btn,Multyplay_btn;
+	TextView title;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,8 @@ public class GameSelectActivity extends Activity {
 		Return_btn = (ImageView)findViewById(R.id.gamesel_return_btn);
 		Singleplay_btn = (ImageView)findViewById(R.id.gamesel_singlep_btn);
 		Multyplay_btn = (ImageView)findViewById(R.id.gamesel_multyp_btn);
+		
+		title = (TextView)findViewById(R.id.gamesel_title_textview);
 		
 		Return_btn.setOnClickListener(new OnClickListener() {
 			
@@ -52,6 +57,8 @@ public class GameSelectActivity extends Activity {
 				startActivity(i);
 			}
 		});
+		Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/SHOWG.TTF");
+		title.setTypeface(typeFace);
 	}
 
 	@Override

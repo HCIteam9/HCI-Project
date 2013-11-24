@@ -4,14 +4,17 @@ import data.userData;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MultyplayActivity extends Activity {
 
 	ImageView create_btn,join_btn,return_btn;
+	TextView title;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,7 @@ public class MultyplayActivity extends Activity {
 		create_btn = (ImageView)findViewById(R.id.multyp_create_btn);
 		join_btn = (ImageView)findViewById(R.id.multyp_join_btn);
 		return_btn = (ImageView)findViewById(R.id.multyp_return_btn);
+		title = (TextView)findViewById(R.id.multyp_title_textview);
 		
 		create_btn.setOnClickListener(new OnClickListener() {
 			
@@ -50,6 +54,8 @@ public class MultyplayActivity extends Activity {
 				finish();
 			}
 		});
+		Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/SHOWG.TTF");
+		title.setTypeface(typeFace);
 	}
 
 	@Override

@@ -78,7 +78,11 @@ public class WaitRoomActivity extends Activity {
 				}
 				else
 				{
-					
+					if(userData.usr.isReady())
+						RS_btn.setImageResource(R.drawable.btn_ready);
+					else
+						RS_btn.setImageResource(R.drawable.cancel_btn);
+					userData.usr.setReady(!userData.usr.isReady());
 				}
 			}
 		});		

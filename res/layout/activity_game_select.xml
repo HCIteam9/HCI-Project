@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ulruru_bg2"
     tools:context=".GameSelectActivity" >
      
     <ImageView
@@ -13,17 +14,14 @@
         android:padding="5dp"
         android:src="@drawable/btn_return" />
 
-    <TextView
-        android:id="@+id/gamesel_title_textview"
+    <ImageView
+        android:id="@+id/gamesel_singlep_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/gamesel_return_btn"
+        android:layout_below="@+id/gamesel_title_textview"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="@string/gamesel_title"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textAlignment="center"
-        android:textSize="30sp" />
+        android:layout_marginTop="60dp"
+        android:src="@drawable/btn_singleplay" />
 
     <ImageView
         android:id="@+id/gamesel_multyp_btn"
@@ -31,16 +29,19 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/gamesel_singlep_btn"
         android:layout_below="@+id/gamesel_singlep_btn"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="70dp"
         android:src="@drawable/btn_multyplay" />
 
-    <ImageView
-        android:id="@+id/gamesel_singlep_btn"
+    <TextView
+        android:id="@+id/gamesel_title_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/gamesel_title_textview"
+        android:layout_below="@+id/gamesel_return_btn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:src="@drawable/btn_singleplay" />
+        android:text="@string/gamesel_title"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30sp" />
     
 </RelativeLayout>

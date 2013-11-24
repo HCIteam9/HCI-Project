@@ -7,6 +7,7 @@ import data.roomData;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,9 +15,11 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class CreateGameActivity extends Activity {
 
+	TextView title;
 	ImageView Return_btn, Creategame_btn;
 	EditText Gamename_edit,Password_edit;
 	Spinner NofPlayer_spinner;
@@ -39,6 +42,7 @@ public class CreateGameActivity extends Activity {
 		Gamename_edit = (EditText)findViewById(R.id.createg_gname_edit);
 		Password_edit = (EditText)findViewById(R.id.createg_pass_edit);
 		NofPlayer_spinner = (Spinner)findViewById(R.id.createg_N_spinner);
+		title = (TextView)findViewById(R.id.createg_title_textview);
 		
 		adapter = new ArrayAdapter<Integer>(this,android.R.layout.simple_spinner_item,nofp);
 		NofPlayer_spinner.setAdapter(adapter);
@@ -71,6 +75,9 @@ public class CreateGameActivity extends Activity {
 				startActivity(i);
 			}
 		});
+		
+		Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/SHOWG.TTF");
+		title.setTypeface(typeFace);
 		
 	}
 

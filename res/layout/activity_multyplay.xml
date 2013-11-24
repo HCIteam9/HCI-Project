@@ -2,7 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ulruru_bg2"
     tools:context=".MultyplayActivity" >
+
    <ImageView
         android:id="@+id/multyp_return_btn"
         android:layout_width="wrap_content"
@@ -18,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/multyp_return_btn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:text="@string/multyp_title"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textAlignment="center"
