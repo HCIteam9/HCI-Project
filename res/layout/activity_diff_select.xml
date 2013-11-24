@@ -24,7 +24,7 @@
         android:text="@string/diffsel_title"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="30sp" />
+        android:textSize="40sp" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"

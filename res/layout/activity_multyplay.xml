@@ -24,7 +24,7 @@
         android:text="@string/multyp_title"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="40sp" />
 
     <ImageView
         android:id="@+id/multyp_join_btn"

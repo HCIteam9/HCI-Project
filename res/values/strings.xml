@@ -19,7 +19,7 @@
     <string name="gamesel_title">Select game mode</string>
 	<string name="option_title">Options</string>
 	<string name="createg_title">Create game</string>
-	<string name="diffsel_title">Difficulty Selection</string>
+	<string name="diffsel_title">Set Difficulty</string>
 	<string name="multyp_title">Multy play game</string>
 	<string name="joing_title">Join game</string>
 	<string name="scoreb_title">Scoreboard</string>

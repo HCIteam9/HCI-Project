@@ -8,6 +8,7 @@ import data.userData;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,7 +20,7 @@ public class WaitRoomActivity extends Activity {
 
 	ArrayList<TextView> p_txt = new ArrayList<TextView>();
 	boolean ready_chk[] = new boolean[10];
-	TextView roomname_txt;
+	TextView roomname_txt,title;
 	ImageView return_btn,RS_btn;
 	
 	
@@ -39,6 +40,7 @@ public class WaitRoomActivity extends Activity {
 		return_btn = (ImageView)findViewById(R.id.wait_return_btn);
 		RS_btn = (ImageView)findViewById(R.id.wait_RS_btn);
 		roomname_txt = (TextView)findViewById(R.id.wait_room_title);
+		title =  (TextView)findViewById(R.id.wait_title_textview);
 		
 		for(int i=0 ; i<roomData.rdat.getPlayer().size() ; i++)
 		{
@@ -50,7 +52,7 @@ public class WaitRoomActivity extends Activity {
 			RS_btn.setImageResource(R.drawable.btn_gamestart);
 		else
 			RS_btn.setImageResource(R.drawable.btn_ready);
-		roomname_txt.setText(roomData.rdat.getGamename());
+		roomname_txt.setText("Room name: "+roomData.rdat.getGamename());
 		
 		return_btn.setOnClickListener(new OnClickListener() {
 			
@@ -103,6 +105,9 @@ public class WaitRoomActivity extends Activity {
 				}
 			});
 		}
+		Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/SHOWG.TTF");
+		title.setTypeface(typeFace);
+		roomname_txt.setTypeface(typeFace);
 	}
 	
 	public boolean chkready()

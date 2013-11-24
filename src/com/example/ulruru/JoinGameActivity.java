@@ -9,21 +9,27 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnHoverListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class JoinGameActivity extends Activity {
 	
+	TextView title;
 	ImageView return_btn;
 	ListView room_list;
 	roomAdapter adapter;
@@ -39,6 +45,7 @@ public class JoinGameActivity extends Activity {
 		return_btn = (ImageView)findViewById(R.id.joing_return_btn);
 		room_list = (ListView)findViewById(R.id.joing_list);
 		adapter = new roomAdapter(room_arr,JoinGameActivity.this);
+		title = (TextView)findViewById(R.id.joing_title_textview);
 		room_list.setAdapter(adapter);
 		
 		make_dummy();
@@ -63,6 +70,7 @@ public class JoinGameActivity extends Activity {
 				}
 			}
 		});
+	
 		return_btn.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -71,6 +79,8 @@ public class JoinGameActivity extends Activity {
 				finish();
 			}
 		});
+		Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/SHOWG.TTF");
+		title.setTypeface(typeFace);
 	}
 
 	public void make_dummy()

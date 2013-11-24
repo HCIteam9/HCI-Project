@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ulruru_bg2"
     tools:context=".CreateGameActivity" >
 	
      <ImageView
@@ -24,7 +25,7 @@
         android:text="@string/createg_title"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="40sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -37,61 +38,87 @@
         <RelativeLayout 
             android:layout_width="wrap_content"
       		android:layout_height="wrap_content"
+      		android:layout_marginTop="20dp"
       	    android:layout_gravity="center_horizontal">
+
             <TextView
                 android:id="@+id/createg_txt1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Room name" />
-
+                android:layout_alignBaseline="@+id/createg_gname_edit"
+                android:layout_alignBottom="@+id/createg_gname_edit"
+                android:layout_alignParentLeft="true"
+                android:text="Room name"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp" />
             <EditText
                 android:id="@+id/createg_gname_edit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:width="200dp"
-                android:layout_toRightOf="@id/createg_txt1"
-                >
-               
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="15dp"
+                android:ems="10"
+                android:width="200dp" >
             </EditText>
+
+      
      	
         </RelativeLayout>
         
         <RelativeLayout
             android:layout_width="wrap_content"
       		android:layout_height="wrap_content"
+      		android:layout_marginTop="20dp"
       		android:layout_gravity="center_horizontal">
-            <TextView
+		
+             <TextView
                 android:id="@+id/createg_txt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Room Password" />
-
+                android:layout_alignBaseline="@+id/createg_pass_edit"
+                android:layout_alignBottom="@+id/createg_pass_edit"
+                android:layout_alignParentLeft="true"
+                android:text="Room Password"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp" />
             <EditText
                 android:id="@+id/createg_pass_edit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:width="200dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="15dp"
                 android:password="true"
-                android:layout_toRightOf="@id/createg_txt2"
-                >
-               
-            </EditText>  
+                android:ems="10"
+                android:width="200dp" />
+
+           
+  
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="wrap_content"
       		android:layout_height="wrap_content"
+      		android:layout_marginTop="20dp"
       		android:layout_gravity="center_horizontal">
             <TextView
                 android:id="@+id/createg_txt3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="15sp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
                 android:text="# of Plyaers" />
 
             <Spinner
                 android:id="@+id/createg_N_spinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/createg_txt3" />
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentTop="true" />
      
         </RelativeLayout>
         <ImageView

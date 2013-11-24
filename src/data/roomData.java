@@ -7,7 +7,14 @@ public class roomData {
 	private ArrayList<String> players;
 	private String psswd;
 	private String gamename;
+	private boolean selected;
 	
+	public boolean isSelected() {
+		return selected;
+	}
+	public void setSelected(boolean selected) {
+		this.selected = selected;
+	}
 	public String getGamename() {
 		return gamename;
 	}

@@ -28,12 +28,13 @@ public final class R {
         public static final int btn_singleplay=0x7f02000e;
         public static final int cancel_btn=0x7f02000f;
         public static final int empty=0x7f020010;
-        public static final int highlight=0x7f020011;
-        public static final int ic_launcher=0x7f020012;
-        public static final int lock=0x7f020013;
-        public static final int ulruru_bg=0x7f020014;
-        public static final int ulruru_bg2=0x7f020015;
-        public static final int ulrurutitle=0x7f020016;
+        public static final int grey=0x7f020011;
+        public static final int highlight=0x7f020012;
+        public static final int ic_launcher=0x7f020013;
+        public static final int lock=0x7f020014;
+        public static final int ulruru_bg=0x7f020015;
+        public static final int ulruru_bg2=0x7f020016;
+        public static final int ulrurutitle=0x7f020017;
     }
     public static final class id {
         public static final int createg_N_spinner=0x7f070007;

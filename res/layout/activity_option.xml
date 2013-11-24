@@ -77,6 +77,6 @@
         android:text="@string/option_title"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="30sp" />
+        android:textSize="40sp" />
 
 </RelativeLayout>

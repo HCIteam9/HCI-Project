@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 public class CreateGameActivity extends Activity {
 
-	TextView title;
+	TextView title,txt1,txt2,txt3;
 	ImageView Return_btn, Creategame_btn;
 	EditText Gamename_edit,Password_edit;
 	Spinner NofPlayer_spinner;
@@ -43,6 +43,9 @@ public class CreateGameActivity extends Activity {
 		Password_edit = (EditText)findViewById(R.id.createg_pass_edit);
 		NofPlayer_spinner = (Spinner)findViewById(R.id.createg_N_spinner);
 		title = (TextView)findViewById(R.id.createg_title_textview);
+		txt1 = (TextView)findViewById(R.id.createg_txt1);
+		txt2 = (TextView)findViewById(R.id.createg_txt2);
+		txt3 = (TextView)findViewById(R.id.createg_txt3);
 		
 		adapter = new ArrayAdapter<Integer>(this,android.R.layout.simple_spinner_item,nofp);
 		NofPlayer_spinner.setAdapter(adapter);
@@ -78,7 +81,9 @@ public class CreateGameActivity extends Activity {
 		
 		Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/SHOWG.TTF");
 		title.setTypeface(typeFace);
-		
+		txt1.setTypeface(typeFace);
+		txt2.setTypeface(typeFace);
+		txt3.setTypeface(typeFace);
 	}
 
 	@Override
