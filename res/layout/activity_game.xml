@@ -1,7 +1,23 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".GameActivity" >
 
-</RelativeLayout>
+    <GridView
+        android:id="@+id/cardtableView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="4"
+        android:layout_margin="0dp" >
+    </GridView>
+
+    <ImageView
+        android:id="@+id/boardView"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ulruru_board" />
+
+</LinearLayout>
