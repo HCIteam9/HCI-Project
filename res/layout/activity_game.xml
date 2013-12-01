@@ -9,8 +9,8 @@
         android:id="@+id/cardtableView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:numColumns="4"
-        android:layout_margin="0dp" >
+        android:layout_margin="0dp"
+        android:numColumns="4" >
     </GridView>
 
     <ImageView
@@ -19,5 +19,21 @@
         android:layout_height="200dp"
         android:scaleType="fitXY"
         android:src="@drawable/ulruru_board" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start" />
+
+    <ProgressBar
+        android:id="@+id/timeBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:max="300"
+        android:visibility="gone" />
 
 </LinearLayout>
