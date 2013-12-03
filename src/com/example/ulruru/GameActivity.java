@@ -1,6 +1,7 @@
 package com.example.ulruru;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -16,7 +17,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
-import android.view.ViewGroup.LayoutParams;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -25,6 +25,8 @@ import android.widget.RelativeLayout;
 
 public class GameActivity extends Activity {
 	private boolean GAMING = false;
+
+	private static final int RESULT_GAME = 1;
 
 	int[] numbers = new int[] { R.drawable.ulruru_card1,
 			R.drawable.ulruru_card2, R.drawable.ulruru_card3,
@@ -42,8 +44,8 @@ public class GameActivity extends Activity {
 
 	ImageView boardView;
 	TextProgressBar mProgressBar;
-	Button startButton;
-	int nowValue = 800;
+	ImageView startButton;
+	int nowValue = 100;
 	CardTableAdapter cda;
 
 	RelativeLayout gameLayout;
@@ -85,7 +87,7 @@ public class GameActivity extends Activity {
 		gameLayout = (RelativeLayout) findViewById(R.id.gameLayout);
 		buttonLayout = (RelativeLayout) findViewById(R.id.buttonLayout);
 		mProgressBar = (TextProgressBar) findViewById(R.id.timeBar);
-		startButton = (Button) findViewById(R.id.start);
+		startButton = (ImageView) findViewById(R.id.start);
 		boardView = (ImageView) findViewById(R.id.boardView);
 		birdList[0] = (ImageView) findViewById(R.id.bird01);
 		birdList[1] = (ImageView) findViewById(R.id.bird02);
@@ -368,6 +370,11 @@ public class GameActivity extends Activity {
 				}
 			}
 
+			GAMING = false;
+			Intent t = new Intent(GameActivity.this, ResultActivity.class);
+			t.putExtra("card", sub);
+			startActivityForResult(t, RESULT_GAME);
+
 		}
 	};
 
@@ -402,7 +409,8 @@ public class GameActivity extends Activity {
 	}
 
 	public void stateChange(int position) {
-		if(GAMING == false) return;
+		if (GAMING == false)
+			return;
 
 		if (birdSub != null) {
 			saveMargin.setMargins(0, saveHeight, 0, 0);
@@ -418,7 +426,8 @@ public class GameActivity extends Activity {
 	}
 
 	public void setBoardPosition(int x, int y) {
-		if(GAMING == false) return;
+		if (GAMING == false)
+			return;
 
 		bird.setVisibility(View.VISIBLE);
 		MarginLayoutParams parms = (MarginLayoutParams) bird.getLayoutParams();
@@ -433,8 +442,9 @@ public class GameActivity extends Activity {
 	}
 
 	public void setRemoveBird(int position) {
-		if(GAMING == false) return;
-		
+		if (GAMING == false)
+			return;
+
 		if (birdList[position].getVisibility() == View.VISIBLE) {
 			birdList[position].setVisibility(View.GONE);
 			MarginLayoutParams parms = (MarginLayoutParams) birdList[position]
@@ -445,12 +455,35 @@ public class GameActivity extends Activity {
 
 		}
 	}
-	
-	public void zoomingCard(int position){
-		if(GAMING == false) return;
-		
+
+	public void zoomingCard(int position) {
+		if (GAMING == false)
+			return;
+
 		zoomLayout.bringToFront();
 		zoomView.setImageResource(sub[position]);
 		zoomLayout.setVisibility(View.VISIBLE);
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+
+		switch (requestCode) {
+		case RESULT_GAME:
+			String t = data.getStringExtra("return");
+			if (t.equals("start")) {
+				Intent intent = new Intent(GameActivity.this,
+						GameActivity.class);
+				finish();
+				startActivity(intent);
+			} else if (t.equals("exit")) {
+				finish();
+			}
+
+			break;
+		}
+
 	}
 }

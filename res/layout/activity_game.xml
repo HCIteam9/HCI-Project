@@ -10,7 +10,6 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/black"
         android:paddingBottom="5dp" >
 
         <ImageView
@@ -203,12 +202,12 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
-        <Button
+        <ImageView
             android:id="@+id/start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Start" />
+            android:src="@drawable/btn_start" />
     </RelativeLayout>
 
     <RelativeLayout

@@ -23,6 +23,7 @@
 	<string name="multyp_title">Multy play game</string>
 	<string name="joing_title">Join game</string>
 	<string name="scoreb_title">Scoreboard</string>
+	<string name="result_title">Result	Screen</string>
 	<string name="wait_title">Waiting room</string>
 	<!-- Contents -->
 	<string name="option_bgm">BGM</string>
